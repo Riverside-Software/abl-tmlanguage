@@ -17,7 +17,7 @@ describe('', () => {
     { "startIndex": 30, "endIndex": 31, "scopes": ["source.abl"] },  // ' '
     { "startIndex": 31, "endIndex": 47, "scopes": ["source.abl", "storage.data.table.abl"] },  // 'customer.custnum'
     { "startIndex": 47, "endIndex": 48, "scopes": ["source.abl", "meta.brace.round.js"] },  // ')'
-    { "startIndex": 48, "endIndex": 49, "scopes": ["source.abl", "keyword.operator.source.abl"] },  // ','
+    { "startIndex": 48, "endIndex": 49, "scopes": ["source.abl", "punctuation.separator.comma.abl"] },  // ','
     { "startIndex": 49, "endIndex": 50, "scopes": ["source.abl"] },  // ' '
     { "startIndex": 50, "endIndex": 55, "scopes": ["source.abl", "keyword.other.abl"] },  // 'first'
     { "startIndex": 55, "endIndex": 56, "scopes": ["source.abl"] },  // ' '
@@ -41,7 +41,7 @@ describe('', () => {
     { "startIndex": 121, "endIndex": 122, "scopes": ["source.abl", "keyword.operator.source.abl"] },  // '<'
     { "startIndex": 122, "endIndex": 123, "scopes": ["source.abl"] },  // ' '
     { "startIndex": 123, "endIndex": 128, "scopes": ["source.abl", "constant.language.abl"] },  // 'today'
-    { "startIndex": 128, "endIndex": 130, "scopes": ["source.abl"] }  // ':'
+    { "startIndex": 128, "endIndex": 129, "scopes": ["source.abl", "punctuation.terminator.abl"] }  // ':'
   ];
   shared.itShouldMatchExpectedScopes(statement, expectedTokens);
 })
@@ -62,7 +62,7 @@ describe('', () => {
     { "startIndex": 40, "endIndex": 41, "scopes": ["source.abl"] },  // ' '
     { "startIndex": 41, "endIndex": 56, "scopes": ["source.abl", "storage.data.table.abl"] },  // 'month_quota[12]'
     { "startIndex": 56, "endIndex": 57, "scopes": ["source.abl", "meta.brace.round.js"] },  // ')'
-    { "startIndex": 57, "endIndex": 59, "scopes": ["source.abl"] }  // ':'
+    { "startIndex": 57, "endIndex": 58, "scopes": ["source.abl", "punctuation.terminator.abl"] }  // ':'
   ];
   shared.itShouldMatchExpectedScopes(statement, expectedTokens);
 })
