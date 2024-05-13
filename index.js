@@ -33,10 +33,11 @@ lineReader.on('line', line => {
 });
 
 lineReader.on('close', () => {
-    for (var zz = 0; zz < 26; zz++) {
+    for (let zz = 0; zz < 26; zz++) {
+        grammarBlocks2[zz].sort((a, b) => a.length == b.length ? b - a : b.length - a.length);
         result['keywords-' + String.fromCharCode(97 + zz)] = 
          {
-            match: "(?i)(?<![\\w-])(" + grammarBlocks2[zz].sort().join('|') + ")(?![\\w-])",
+            match: "(?i)(?<![\\w-])(" + grammarBlocks2[zz].join('|') + ")(?![\\w-])",
             name: "keyword.other.abl"
         }
     }
